@@ -1,0 +1,28 @@
+{
+    "name": "league/flysystem-adapter-decorator",
+    "description": "A base implementation of a flysystem adapter decorator",
+    "autoload": {
+        "psr-4": {
+            "League\\Flysystem\\AdapterDecorator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "League\\Flysystem\\AdapterDecorator\\Stub\\": "stub/"
+        }
+    },
+    "require": {
+        "league/flysystem": "0.6.*@dev"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0",
+        "henrikbjorn/phpspec-code-coverage": "1.0.*@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank de Jonge",
+            "email": "info@frenky.net"
+        }
+    ]
+}
