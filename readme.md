@@ -5,7 +5,7 @@ only influence a particular part of the interface. The `trait` provided by
 this package provides the default implementation for the methods which the
 decorator is not concerned with.
 
-## Usage
+## Creating Decorators 
 
 ``` php
 <?php
@@ -41,4 +41,18 @@ class MyDecorator implements AdapterInterface
     }
 }
 
+```
+
+## Using Decorators 
+
+``` php
+<?php
+
+use League\Flysystem\Adapter\Local;
+use League\Flysystem\Filesystem;
+
+$adapter = new Local($root);
+$decoratedAdapter = new MyDecorator($adapter);
+$filesystem = new Filesystem($decoratedAdapter);
+// Use the Flysystem as you'd normally would.
 ```
