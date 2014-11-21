@@ -54,5 +54,5 @@ use League\Flysystem\Filesystem;
 $adapter = new Local($root);
 $decoratedAdapter = new MyDecorator($adapter);
 $filesystem = new Filesystem($decoratedAdapter);
-// Use the Flysystem as you'd normally would.
+// Use the Flysystem as you normally would.
 ```
