@@ -12,7 +12,7 @@
         }
     },
     "require": {
-        "league/flysystem": "0.6.*@dev"
+        "league/flysystem": "~1.0@dev"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0",
