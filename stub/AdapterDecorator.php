@@ -31,4 +31,4 @@ class AdapterDecorator
     {
         return $this->adapter;
     }
-} 
+}
