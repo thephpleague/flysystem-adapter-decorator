@@ -1,8 +1,8 @@
 ---
 suites:
-      event_suite:
-        namespace: League\Flysystem\AdapterDecorator
-        psr4_prefix: League\Flysystem\AdapterDecorator
+  event_suite:
+    namespace: League\Flysystem\AdapterDecorator
+    psr4_prefix: League\Flysystem\AdapterDecorator
 extensions:
   - PhpSpec\Extension\CodeCoverageExtension
 formatter.name: pretty

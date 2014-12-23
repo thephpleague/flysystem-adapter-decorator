@@ -8,19 +8,20 @@ use League\Flysystem\Config;
 trait DecoratorTrait
 {
     /**
-     * Get the decorated adapter
+     * Get the decorated adapter.
      *
      * @return AdapterInterface
      */
     abstract protected function getDecoratedAdapter();
 
     /**
-     * Write a new file
+     * Write a new file.
      *
-     * @param   string $path
-     * @param   string $contents
-     * @param   Config $config Config object
-     * @return  array|false  false on failure file meta data on success
+     * @param string $path
+     * @param string $contents
+     * @param Config $config   Config object
+     *
+     * @return array|false false on failure file meta data on success
      */
     public function write($path, $contents, Config $config)
     {
@@ -28,12 +29,13 @@ trait DecoratorTrait
     }
 
     /**
-     * Write a new file using a stream
+     * Write a new file using a stream.
      *
-     * @param   string   $path
-     * @param   resource $resource
-     * @param   Config   $config Config object
-     * @return  array|false  false on failure file meta data on success
+     * @param string   $path
+     * @param resource $resource
+     * @param Config   $config   Config object
+     *
+     * @return array|false false on failure file meta data on success
      */
     public function writeStream($path, $resource, Config $config)
     {
@@ -41,12 +43,13 @@ trait DecoratorTrait
     }
 
     /**
-     * Update a file
+     * Update a file.
      *
-     * @param   string $path
-     * @param   string $contents
-     * @param   Config $config Config object
-     * @return  array|false  false on failure file meta data on success
+     * @param string $path
+     * @param string $contents
+     * @param Config $config   Config object
+     *
+     * @return array|false false on failure file meta data on success
      */
     public function update($path, $contents, Config $config)
     {
@@ -54,12 +57,13 @@ trait DecoratorTrait
     }
 
     /**
-     * Update a file using a stream
+     * Update a file using a stream.
      *
-     * @param   string   $path
-     * @param   resource $resource
-     * @param   Config   $config Config object
-     * @return  array|false  false on failure file meta data on success
+     * @param string   $path
+     * @param resource $resource
+     * @param Config   $config   Config object
+     *
+     * @return array|false false on failure file meta data on success
      */
     public function updateStream($path, $resource, Config $config)
     {
@@ -67,11 +71,12 @@ trait DecoratorTrait
     }
 
     /**
-     * Rename a file
+     * Rename a file.
      *
-     * @param   string $path
-     * @param   string $newpath
-     * @return  boolean
+     * @param string $path
+     * @param string $newpath
+     *
+     * @return bool
      */
     public function rename($path, $newpath)
     {
@@ -79,11 +84,12 @@ trait DecoratorTrait
     }
 
     /**
-     * Copy a file
+     * Copy a file.
      *
-     * @param   string $path
-     * @param   string $newpath
-     * @return  boolean
+     * @param string $path
+     * @param string $newpath
+     *
+     * @return bool
      */
     public function copy($path, $newpath)
     {
@@ -91,10 +97,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Delete a file
+     * Delete a file.
      *
-     * @param   string $path
-     * @return  boolean
+     * @param string $path
+     *
+     * @return bool
      */
     public function delete($path)
     {
@@ -102,10 +109,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Delete a directory
+     * Delete a directory.
      *
-     * @param   string $dirname
-     * @return  boolean
+     * @param string $dirname
+     *
+     * @return bool
      */
     public function deleteDir($dirname)
     {
@@ -113,12 +121,12 @@ trait DecoratorTrait
     }
 
     /**
-     * Create a directory
+     * Create a directory.
      *
-     * @param   string $dirname directory name
-     * @param   Config $config
+     * @param string $dirname directory name
+     * @param Config $config
      *
-     * @return  array|false
+     * @return array|false
      */
     public function createDir($dirname, Config $config)
     {
@@ -126,11 +134,12 @@ trait DecoratorTrait
     }
 
     /**
-     * Set the visibility for a file
+     * Set the visibility for a file.
      *
-     * @param   string $path
-     * @param   string $visibility
-     * @return  array|false   file meta data
+     * @param string $path
+     * @param string $visibility
+     *
+     * @return array|false file meta data
      */
     public function setVisibility($path, $visibility)
     {
@@ -138,10 +147,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Check whether a file exists
+     * Check whether a file exists.
      *
-     * @param   string $path
-     * @return  array|boolean|null
+     * @param string $path
+     *
+     * @return array|bool|null
      */
     public function has($path)
     {
@@ -149,10 +159,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Read a file
+     * Read a file.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function read($path)
     {
@@ -160,10 +171,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Read a file as a stream
+     * Read a file as a stream.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function readStream($path)
     {
@@ -171,11 +183,12 @@ trait DecoratorTrait
     }
 
     /**
-     * List contents of a directory
+     * List contents of a directory.
      *
-     * @param   string $directory
-     * @param   bool   $recursive
-     * @return  array
+     * @param string $directory
+     * @param bool   $recursive
+     *
+     * @return array
      */
     public function listContents($directory = '', $recursive = false)
     {
@@ -183,10 +196,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Get all the meta data of a file or directory
+     * Get all the meta data of a file or directory.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function getMetadata($path)
     {
@@ -194,10 +208,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Get all the meta data of a file or directory
+     * Get all the meta data of a file or directory.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function getSize($path)
     {
@@ -205,10 +220,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Get the mimetype of a file
+     * Get the mimetype of a file.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function getMimetype($path)
     {
@@ -216,10 +232,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Get the timestamp of a file
+     * Get the timestamp of a file.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function getTimestamp($path)
     {
@@ -227,10 +244,11 @@ trait DecoratorTrait
     }
 
     /**
-     * Get the visibility of a file
+     * Get the visibility of a file.
      *
-     * @param   string $path
-     * @return  array|false
+     * @param string $path
+     *
+     * @return array|false
      */
     public function getVisibility($path)
     {
