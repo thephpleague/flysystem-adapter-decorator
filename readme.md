@@ -5,7 +5,13 @@ only influence a particular part of the interface. The `trait` provided by
 this package provides the default implementation for the methods which the
 decorator is not concerned with.
 
-## Creating Decorators 
+## Installation
+
+```bash
+composer require league/flysystem-adapter-decorator
+```
+
+## Creating Decorators
 
 ``` php
 <?php
@@ -17,33 +23,33 @@ use League\Flysystem\Config;
 class MyDecorator implements AdapterInterface
 {
     use DecoratorTrait;
-    
+
     protected $adapter;
-    
+
     public function __construct(AdapterInterface $adapter)
     {
         $this->adapter = $adapter;
     }
-    
+
     // Required method to implement
     protected function getDecoratedAdapter()
     {
         return $this->adapter;
     }
-    
+
     // Add your decorator methods here...
-    
+
     public function write($path, $contents, Config $config)
     {
         $contents = funky_encryption($contents);
-        
+
         return $this->getDecoratedAdapter()->write($path, $contents, $config);
     }
 }
 
 ```
 
-## Using Decorators 
+## Using Decorators
 
 ``` php
 <?php
