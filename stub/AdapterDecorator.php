@@ -15,7 +15,7 @@ class AdapterDecorator
     protected $adapter;
 
     /**
-     * Constructor
+     * Constructor.
      *
      * @param AdapterInterface $adapter
      */
